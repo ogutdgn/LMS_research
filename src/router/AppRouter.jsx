@@ -1,6 +1,11 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from '../pages/HomePage';
 import SpeedReadingTest from '../components/reading-tests/speed-reading-test/SpeedReadingTest';
+import DotEyeExercise from '../components/reading-exercises/13-dot-eye/DotEyeExercise';
+import ZigZagExercise from '../components/reading-exercises/ZigZagExercise';
+import ExerciseLayout from '../components/ExerciseLayout';
+import ExerciseManagement from '../components/ExerciseManagement';
+
 
 const NotFound = () => (
     <div style={{ textAlign: 'center', padding: '50px' }}>
@@ -13,19 +18,21 @@ const NotFound = () => (
     return (
       <Router>
         <Routes>
-          {/* Ana Sayfa */}
+          {/* Home Page */}
           <Route path="/app" element={<HomePage />} />
           
-          {/* <Route path="/app/gelisim/egzersizler/goz-kaslari-gelistirme" element={<GozKaslariEgzersizi />} />
-          <Route path="/app/gelisim/egzersizler/gorme-alani-genisletme" element={<GormeAlaniEgzersizi />} /> */}
+
+          {/* Exercises */}
+          <Route path="/app/exercises/13-dot-eye" element={<DotEyeExercise />} />
+          <Route path="/app/exercises/zig-zag" element={<ExerciseManagement />} />
+
+          {/* Workouts */}
+          {/* <Route path="/app/gelisim/calisma/temel-okuma-calismasi" element={<TemelOkumaCalisma />} /> */}
           
-          {/* <Route path="/app/gelisim/calisma/temel-okuma-calismasi" element={<TemelOkumaCalisma />} />
-          <Route path="/app/gelisim/calisma/ileri-seviye-okuma-calismasi" element={<IleriSeviyeCalisma />} /> */}
+
+          {/* Tests */}
+          <Route path="/app/tests/speed-reading-test" element={<SpeedReadingTest />} />
           
-          <Route path="/app/gelisim/test/speed-reading-test" element={<SpeedReadingTest />} />
-          {/* <Route path="/app/gelisim/test/anlama-testi" element={<AnlamaTesti />} /> */}
-          
-          {/* <Route path="/" element={<Navigate to="/app" replace />} /> */}
           
           <Route path="*" element={<NotFound />} />
         </Routes>
