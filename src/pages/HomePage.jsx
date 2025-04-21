@@ -113,7 +113,7 @@ export default function HomePage() {
         
         <TabPanel value={tabValue} index={0}>
           <Typography variant="body1" paragraph>
-            Göz kaslarını geliştirme, aktif görme alanını genişletme, hızlı odaklanma gibi yeteneklerin geliştirilmesine yönelik hazırlanmış egzersizlere göz atın.
+            Göz karme, aktif görme alanını genişletme, hızlı odaklanma gibi yeteneklerin geliştirilmesine yönelik hazırlanmış egzersizlere göz atın.
           </Typography>
           <List sx={{ width: '100%' }}>
             {fastReadingExercises.map((exercise) => (
